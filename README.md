@@ -1,5 +1,5 @@
-<h1>Creating a Network File Share and accessing it with a User Account</h1>
-This demonstration shows how to create a network file share and then using a user account within the same domain to access the file. This environment consists of a Windows Server 2022 virtual machine acting as the Domain Controller on a VNet with a Windows 10 virtual machine acting as a client within the same VNet. These virtual machines and this VNet was created with Microsoft Azure. The Domain Controller has Active Directory installed on it. The Domain Controller and the client on the VNet are both connected to the same domain. I am connecting to the Domain Controller and the client via Remote Desktop Protocol through my local device which is a Windows 11 computer.<br />
+<h1>Network File Shares and Permissions</h1>
+This demonstration shows how to create a network file share, assign it's permissions, and then use a user account within the same domain to access the file share. This environment consists of a Windows Server 2022 virtual machine acting as the Domain Controller on a VNet with a Windows 10 virtual machine acting as a client within the same VNet. These virtual machines and this VNet was created with Microsoft Azure. The Domain Controller has Active Directory installed on it. The Domain Controller and the client on the VNet are both connected to the same domain. I am connecting to the Domain Controller and the client via Remote Desktop Protocol through my local device which is a Windows 11 computer.<br />
 
 <h2>Environments and Technologies used</h2>
 
@@ -15,7 +15,7 @@ This demonstration shows how to create a network file share and then using a use
 
 <br />
 
-<h2>Creating a Network File Share</h2>
+<h2>Creating a Network File Share and assinging it Permissions</h2>
 
 <p>
   <img src="https://github.com/user-attachments/assets/dff0773f-388e-4770-841c-2148ed3ea37b" height="80%" width="80%">
@@ -35,7 +35,7 @@ This demonstration shows how to create a network file share and then using a use
 <p>
   <img src="https://github.com/user-attachments/assets/09f6d04b-cd4c-47c6-86c6-1fc4ef57b1e7" height="50%" width="50%">
 </p>
-<p>Now click on "Share..." and type in "domain users" so that way we can share the folder with all of the users on the domain. Once you type in "domain users", click "Add". At this point you can view the "Permission Level" next to "Domain Users" you added to see if that is the permission level you want set to the domain users who have access to the file share, or you can change it to the most appropriate level if needed. Now click "Share".</p><br />
+<p>Now click on "Share..." and type in "domain users" so that way we can share the folder with all of the users on the domain. Once you type in "domain users", click "Add". At this point you can assign the appropriate permissions to the file share with the "Permission Level" next to "Domain Users". When assigning permissions to a file share, you can choose "Read", "Read/Write", or "Remove" which removes the access permission from a security principal (user, group, or computer). Because this folder I created is called "Read Only", I will leave the "Permission Level" to "Read". Now click "Share".</p><br />
 
 <p>
   <img src="https://github.com/user-attachments/assets/225ce557-bdb0-4725-b475-6ff30bfa79c1" height="50%" width="50%">
